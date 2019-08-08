@@ -1,0 +1,15 @@
+
+#  服务端口号
+server:
+      port: 6666
+spring:
+      application:
+            name: eureka
+
+# 关闭注册中心的客户端，防止去找注册中心
+eureka:
+      client:
+            register-with-eureka: false # 关闭自己注册自己
+            fetch-registry: false # 关闭检索服务
+            service-url:
+                  defaultZone: http://localhost:6666/eureka
